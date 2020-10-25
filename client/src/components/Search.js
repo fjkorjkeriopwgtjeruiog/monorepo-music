@@ -1,7 +1,23 @@
 import React from 'react';
 
-const SearchForm = () => {
-  return <h3>Escriba en el formulario</h3>;
+const Search = ({ handleChange, espera }) => {
+  return (
+    <>
+      <form>
+        <label>Escriba en el formulario:</label>
+        <input
+          type="text"
+          id="autor"
+          placeholder="Autor"
+          name="autor"
+          onChange={espera}
+        />
+        <button type="button" onClick={handleChange}>
+          Buscar
+        </button>
+      </form>
+    </>
+  );
 };
 
-export default SearchForm;
+export default Search;

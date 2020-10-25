@@ -1,11 +1,10 @@
 import React from 'react';
 
-const Header = () => {
-  return (
-    <header>
-      <h1>Previsión del clima</h1>
-    </header>
-  );
+const Header = ({ autor }) => {
+  let texto;
+  if (autor === '') texto = 'Todas las canciones';
+  else texto = 'Canciones de ' + autor;
+  return <h1>{texto}</h1>;
 };
 
 export default Header;
