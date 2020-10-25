@@ -3,7 +3,22 @@
   "version": "1.0.0",
   "main": "index.js",
   "repository": "git@github.com:fjkorjkeriopwgtjeruiog/monorepo-music.git",
-  "author": "fjkorjkeriopwgtjeruiog <danielpareja1992@gmail.com>",
+  "author": "Daniel <danielpareja1992@gmail.com>",
   "license": "MIT",
-  "private": true
+  "private": true,
+  "devDependencies": {
+    "lerna": "^3.22.1"
+  },
+  "workspaces": [
+    "server",
+    "client"
+  ],
+  "scripts": {
+    "start": "yarn nodemon ./index.js",
+    "seed": "node ./data/seed.js"
+  },
+  "dependencies": {
+    "mongoose": "^5.10.10",
+    "node-sass": "^4.14.1"
+  }
 }
